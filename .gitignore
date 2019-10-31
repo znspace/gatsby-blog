@@ -1,6 +1,9 @@
 node_modules/
 .cache/
+# Build directory
 public/
+coverage/
+
 npm-debug.log
 .eslintcache
 .gatsby-context.js
