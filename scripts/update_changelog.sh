@@ -23,7 +23,7 @@ NEW_TAG=$1
 CURRENT_DATE=$(date +"%Y-%m-%d")
 
 LAST_TAG=$(git describe --tags $(git rev-list --tags --max-count=1))
-LAST_DATE=$(git log -1 --format=%ai $LAST_TAG)
+LAST_DATE=$(git log -1 --format=%ai "$LAST_TAG")
 
 CHANGES=$(curl -s "https://api.github.com/repos/${REPO}/pulls?state=closed" | \
 jq --arg l "$LAST_DATE" -r '.[] | select((.merged_at != null) and (.closed_at > $l)) | "- [Pull #\(.number)](\(.html_url)): \(.title)"')
