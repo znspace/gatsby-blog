@@ -1,10 +1,10 @@
 ---
 template: post
-title: OnePlus 7 Pro 折腾记
+title: OnePlus 7 Pro 刷机记录
 slug: /posts/use-twrp-recovery-for-oneplus-7-pro/
 draft: false
 date: 2019-11-01T10:12:03.284Z
-description: OnePlus 7 Pro OxygenOS 10，刷入TWRP、Magisk教程。
+description: OnePlus 7 Pro 升级到 OxygenOS 10，刷入TWRP、Magisk教程。
 category: 经验总结
 tags:
   - android
@@ -14,8 +14,8 @@ tags:
 
 - [The first transition](#先期准备)
 - [Unlock Bootloader](#unlock-bootloader)
-- [TWRP](#TWRP)
-- [Magisk](#Magisk)
+- [TWRP](#twrp)
+- [Magisk](#magisk)
 - [一些问题](#一些问题)
 
 ## 先期准备
