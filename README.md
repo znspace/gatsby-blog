@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="Lumen" title="Lumen" src="https://github.com/alxshelepenok/gatsby-starter-lumen/blob/gatsby-v2/.github/logo.png" width="140"> </br>
+    <img alt="Lumen" title="Lumen" src="https://github.com/znspace/gatsby-blog/blob/gatsby-v2/.github/logo.png" width="140"> </br>
     Gatsby Starter - Nan's Blog
 </h1>
 
@@ -13,20 +13,21 @@
     <a href="https://codecov.io/gh/ZNspace/gatsby-blog"><img src="https://codecov.io/gh/ZNspace/gatsby-blog/branch/master/graph/badge.svg" /></a>
     <a href="https://www.codacy.com/manual/ZNspace/gatsby-blog?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ZNspace/gatsby-blog&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/e6af4a3ee08e4ed8ac929e65674f1a68"/></a>
     <a href="https://app.fossa.com/projects/git%2Bgithub.com%2FZNspace%2Fgatsby-blog?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2FZNspace%2Fgatsby-blog.svg?type=shield"/></a>
+    <a href="http://github.com/znspace/gatsby-blog" alt="GitHub Actions status"><img src="https://github.com/znspace/gatsby-blog/workflows/Node%20CI/badge.svg"/></a>
 </p>
 
 ## Table of contents
-+ [Features](http://github.com/alxshelepenok/gatsby-starter-lumen#features)
-+ [Web Performance Tests](http://github.com/alxshelepenok/gatsby-starter-lumen#web-performance-tests)
-+ [Quick Start](http://github.com/alxshelepenok/gatsby-starter-lumen#quick-start)
-+ [Deploy with Netlify](http://github.com/alxshelepenok/gatsby-starter-lumen#deploy-with-netlify)
-+ [Folder Structure](http://github.com/alxshelepenok/gatsby-starter-lumen#folder-structure)
-+ [Related](http://github.com/alxshelepenok/gatsby-starter-lumen#related)
-+ [Contributors](http://github.com/alxshelepenok/gatsby-starter-lumen#contributors)
-+ [Backers](http://github.com/alxshelepenok/gatsby-starter-lumen#backers)
-+ [Sponsors](http://github.com/alxshelepenok/gatsby-starter-lumen#sponsors)
-+ [Credits](http://github.com/alxshelepenok/gatsby-starter-lumen#credits)
-+ [License](http://github.com/alxshelepenok/gatsby-starter-lumen#license)
++ [Features](http://github.com/znspace/gatsby-blog#features)
++ [Web Performance Tests](http://github.com/znspace/gatsby-blog#web-performance-tests)
++ [Quick Start](http://github.com/znspace/gatsby-blog#quick-start)
++ [Deploy with Netlify](http://github.com/znspace/gatsby-blog#deploy-with-netlify)
++ [Folder Structure](http://github.com/znspace/gatsby-blog#folder-structure)
++ [Related](http://github.com/znspace/gatsby-blog#related)
++ [Contributors](http://github.com/znspace/gatsby-blog#contributors)
++ [Backers](http://github.com/znspace/gatsby-blog#backers)
++ [Sponsors](http://github.com/znspace/gatsby-blog#sponsors)
++ [Credits](http://github.com/znspace/gatsby-blog#credits)
++ [License](http://github.com/znspace/gatsby-blog#license)
 
 ## Features
 + [Lost Grid](http://lostgrid.org).
@@ -53,7 +54,7 @@ Use the Gatsby CLI to create a new site, specifying the Lumen starter.
 
 ```sh
 # Create a new Gatsby site using the Lumen starter
-gatsby new blog https://github.com/alxshelepenok/gatsby-starter-lumen
+gatsby new blog https://github.com/znspace/gatsby-blog
 ```
 
 #### Start Developing

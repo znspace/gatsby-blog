@@ -2,8 +2,12 @@ version: 2
 
 defaults: &defaults
   docker:
-    - image: circleci/node:10.17.0
-  working_directory: ~/gatsby-starter-lumen
+    - image: circleci/node:latest-browsers
+  environment:
+    NODE_OPTIONS: --max_old_space_size=4096
+    # NPM_CONFIG_LOGLEVEL: error
+    JOBS: max # https://gist.github.com/ralphtheninja/f7c45bdee00784b41fed
+  working_directory: ~/gatsby-blog
 
 jobs:
   install:
@@ -12,12 +16,12 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - dependencies-{{ checksum "yarn.lock" }}
-      - run: yarn install --frozen-lockfile
+            - node-modules-{{ checksum "package.json" }}
+      - run: yarn install
       - save_cache:
           paths:
             - node_modules
-          key: dependencies-{{ checksum "yarn.lock" }}
+          key: node-modules-{{ checksum "package.json" }}
 
   lint:
     <<: *defaults
@@ -25,7 +29,7 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - dependencies-{{ checksum "yarn.lock" }}
+            - node-modules-{{ checksum "package.json" }}
       - run: yarn lint
 
   test:
@@ -34,35 +38,37 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - dependencies-{{ checksum "yarn.lock" }}
+            - node-modules-{{ checksum "package.json" }}
       - run: yarn test --runInBand --no-cache
-
-  coverage:
-    <<: *defaults
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-            - dependencies-{{ checksum "yarn.lock" }}
       - run: yarn test:coverage --runInBand --no-cache
-      - save_cache:
-          key: coverage-{{ .Environment.CIRCLE_SHA1 }}
-          paths:
-            - coverage
-
-  codecov:
-    <<: *defaults
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-            - dependencies-{{ checksum "yarn.lock" }}
-      - restore_cache:
-          keys:
-            - coverage-output-{{ .Environment.CIRCLE_SHA1 }}
       - run: yarn global add codecov
       - run: yarn codecov
-    
+
+  # coverage:
+  #   <<: *defaults
+  #   steps:
+  #     - checkout
+  #     - restore_cache:
+  #         keys:
+  #           - node-modules-{{ checksum "package.json" }}
+  #     - run: yarn test:coverage --runInBand --no-cache
+  #     - save_cache:
+  #         key: coverage-{{ .Environment.CIRCLE_SHA1 }}
+  #         paths:
+  #           - coverage
+  # codecov:
+  #   <<: *defaults
+  #   steps:
+  #     - checkout
+  #     - restore_cache:
+  #         keys:
+  #           - node-modules-{{ checksum "package.json" }}
+  #     - restore_cache:
+  #         keys:
+  #           - coverage-output-{{ .Environment.CIRCLE_SHA1 }}
+  #     - run: yarn global add codecov
+  #     - run: yarn codecov
+
 workflows:
   version: 2
   test:
@@ -74,9 +80,9 @@ workflows:
       - test:
           requires:
             - install
-      - coverage:
-          requires:
-            - install
-      - codecov:
-          requires:
-            - coverage
+      # - coverage:
+      #     requires:
+      #       - install
+      # - codecov:
+      #     requires:
+      #       - coverage
