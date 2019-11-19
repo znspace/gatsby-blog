@@ -31,12 +31,14 @@ const PostTemplate = ({ data }: Props) => {
   // 评论插件
 
   useEffect(() => {
-    const GitTalkInstance = new Gitalk({
-      ...gitalk,
-      title: postTitle
-      // id: id || graphqlId
-    });
-    GitTalkInstance.render('gitalk-container');
+    if (gitalk) {
+      const GitTalkInstance = new Gitalk({
+        ...gitalk,
+        title: postTitle
+        // id: id || graphqlId
+      });
+      GitTalkInstance.render('gitalk-container');
+    }
   }, []);
 
   return (
