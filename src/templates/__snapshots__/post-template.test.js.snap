@@ -100,5 +100,8 @@ exports[`PostTemplate renders correctly 1`] = `
       className="post__comments"
     />
   </div>
+  <div
+    id="gitalk-container"
+  />
 </div>
 `;
