@@ -11,8 +11,8 @@ module.exports = {
   googleAnalyticsId: 'G-PCW066E8TR',
   gitalk: {
     repo: 'znspace.github.io',
-    admin: ['znspace'],
-    owner: 'znspace',
+    admin: ['ZNspace'],
+    owner: 'ZNspace',
     clientID: '0a470b62a738f4a37ebd',
     clientSecret: '0f168e6f50baa7e48c0ef649e8d2fbb25d8ce66f',
     distractionFreeMode: true
