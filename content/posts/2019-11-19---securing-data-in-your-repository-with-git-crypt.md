@@ -23,8 +23,8 @@ socialImage: ''
 2. 运行命令
 
 ```zsh
-	$ brew install git-crypt
-	$ brew install gpg
+$ brew install git-crypt
+$ brew install gpg
 ```
 
 ## 生成密钥
@@ -41,7 +41,7 @@ $ gpg --list-keys # 会列出当前所有的密钥
 
 1. 进入到你的 git 项目中  
    `cd yourRepo`
-2. 生成对称主密钥并将其提交到自动创建的 .git-crypt 文件夹
+2. 生成对称主密钥并将其提交到自动创建的 .git-crypt 文件夹  
    `git-crypt init`
 3. 添加一个主密钥副本，该副本已使用您的公共 GPG 密钥加密 (只有这样才能解密)  
    `git-crypt add-gpg-user --trusted your.email@domain.com`
@@ -66,8 +66,8 @@ config/*.yml filter=git-crypt diff=git-crypt
 9.  提交并 push 远端
 
 ```zsh
-	$ git commit
-	$ git push
+$ git commit
+$ git push
 ```
 
 ## 更换机器

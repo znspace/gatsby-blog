@@ -156,6 +156,10 @@ figcaption {
 .anchor {
   margin-left: -30px !important;
   padding-right: 14px !important;
+
+  svg[aria-hidden='true'] {
+    stroke: var(--color-primary);
+  }
 }
 
 @include breakpoint-sm {
