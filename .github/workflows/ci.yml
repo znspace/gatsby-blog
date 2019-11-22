@@ -15,18 +15,35 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node_version }}
-      - run: yarn install --frozen-lockfile
-      - run: yarn build
-      - run: yarn codechecks
+
+      - name: Cache dependencies
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: ${{ runner.OS }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.OS }}-yarn-
+
+      - name: Install Dependencies
+        if: steps.cache-primes.outputs.cache-hit != 'true'
+        run: yarn install --frozen-lockfile
+
+      - name: Code Checks
+        run: |
+          yarn build
+          yarn codechecks
         env:
           CC_SECRET: ${{ secrets.CC_SECRET }}
-      - run: yarn test:coverage --runInBand --no-cache
+
+      - name: Test Coverage
+        run: yarn test:coverage --runInBand --no-cache
         env:
           CI: true
           HEADLESS: false
           TEST_TIMEOUT: 300000
           PROGRESS: none
           NODE_OPTIONS: --max_old_space_size=4096
+
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1.0.3
         with:

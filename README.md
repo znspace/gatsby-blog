@@ -13,6 +13,7 @@
     <a href="https://www.codacy.com/manual/ZNspace/gatsby-blog?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ZNspace/gatsby-blog&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/e6af4a3ee08e4ed8ac929e65674f1a68"/></a>
     <a href="https://app.fossa.com/projects/git%2Bgithub.com%2FZNspace%2Fgatsby-blog?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2FZNspace%2Fgatsby-blog.svg?type=shield"/></a>
     <a href="http://github.com/znspace/gatsby-blog" alt="GitHub Actions status"><img src="https://github.com/znspace/gatsby-blog/workflows/Node%20CI/badge.svg"/></a>
+    <a href="https://codechecks.io"><img src="https://raw.githubusercontent.com/codechecks/docs/master/images/badges/badge-default.svg?sanitize=true" alt="codechecks.io" /></a>
 </p>
 
 ## Table of contents
