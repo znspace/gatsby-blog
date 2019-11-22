@@ -1,6 +1,5 @@
 <h1 align="center">
-    <img alt="Lumen" title="Lumen" src="https://github.com/znspace/gatsby-blog/blob/gatsby-v2/.github/logo.png" width="140"> </br>
-    Gatsby Starter - Nan's Blog
+  Gatsby Starter - Nan's Blog
 </h1>
 
 <h4 align="center">
@@ -17,34 +16,37 @@
 </p>
 
 ## Table of contents
-+ [Features](http://github.com/znspace/gatsby-blog#features)
-+ [Web Performance Tests](http://github.com/znspace/gatsby-blog#web-performance-tests)
-+ [Quick Start](http://github.com/znspace/gatsby-blog#quick-start)
-+ [Deploy with Netlify](http://github.com/znspace/gatsby-blog#deploy-with-netlify)
-+ [Folder Structure](http://github.com/znspace/gatsby-blog#folder-structure)
-+ [Related](http://github.com/znspace/gatsby-blog#related)
-+ [Contributors](http://github.com/znspace/gatsby-blog#contributors)
-+ [Backers](http://github.com/znspace/gatsby-blog#backers)
-+ [Sponsors](http://github.com/znspace/gatsby-blog#sponsors)
-+ [Credits](http://github.com/znspace/gatsby-blog#credits)
-+ [License](http://github.com/znspace/gatsby-blog#license)
+
+- [Features](http://github.com/znspace/gatsby-blog#features)
+- [Web Performance Tests](http://github.com/znspace/gatsby-blog#web-performance-tests)
+- [Quick Start](http://github.com/znspace/gatsby-blog#quick-start)
+- [Deploy with Netlify](http://github.com/znspace/gatsby-blog#deploy-with-netlify)
+- [Folder Structure](http://github.com/znspace/gatsby-blog#folder-structure)
+- [Related](http://github.com/znspace/gatsby-blog#related)
+- [Contributors](http://github.com/znspace/gatsby-blog#contributors)
+- [Backers](http://github.com/znspace/gatsby-blog#backers)
+- [Sponsors](http://github.com/znspace/gatsby-blog#sponsors)
+- [Credits](http://github.com/znspace/gatsby-blog#credits)
+- [License](http://github.com/znspace/gatsby-blog#license)
 
 ## Features
-+ [Lost Grid](http://lostgrid.org).
-+ [Modern font stack](https://bitsofco.de/the-new-system-font-stack).
-+ Beautiful typography inspired by [matejlatin/Gutenberg](https://github.com/matejlatin/Gutenberg).
-+ Syntax highlighting in code blocks using [PrismJS](http://prismjs.com).
-+ [Mobile-First](https://medium.com/@mrmrs_/mobile-first-css-48bc4cc3f60f) approach in development.
-+ Archive organized by tags and categories.
-+ Pagination support.
-+ [Netlify CMS](https://www.netlifycms.org) support.
-+ Google Analytics.
-+ Disqus Comments.
-+ [Flow](https://flow.org/) static type checking.
+
+- [Lost Grid](http://lostgrid.org).
+- [Modern font stack](https://bitsofco.de/the-new-system-font-stack).
+- Beautiful typography inspired by [matejlatin/Gutenberg](https://github.com/matejlatin/Gutenberg).
+- Syntax highlighting in code blocks using [PrismJS](http://prismjs.com).
+- [Mobile-First](https://medium.com/@mrmrs_/mobile-first-css-48bc4cc3f60f) approach in development.
+- Archive organized by tags and categories.
+- Pagination support.
+- [Netlify CMS](https://www.netlifycms.org) support.
+- Google Analytics.
+- Disqus Comments.
+- [Flow](https://flow.org/) static type checking.
 
 ## Web Performance Tests
-+ Lighthouse Report - [WebPageTest](https://www.webpagetest.org/result/190510_FE_3f2b13d0beed320f477467d433f56f43/)
-+ Visual Comparison - [WebPageTest](https://www.webpagetest.org/video/compare.php?tests=190510_KZ_1228c343ccf04148619a5d0b89a41f71,190510_RE_b3bfad442f32c690a9f420fe46025b8d,190510_RS_3b5f0bff2d95161351dc6934cadbf1cf,190510_SC_5c458c451941f81b12911ccf4171a817,190510_63_52d5edd8743773815fbacb2e9c66d228,190510_AS_741b29f5af5a6e54980d82826d7bb5bb)
+
+- Lighthouse Report - [WebPageTest](https://www.webpagetest.org/result/190510_FE_3f2b13d0beed320f477467d433f56f43/)
+- Visual Comparison - [WebPageTest](https://www.webpagetest.org/video/compare.php?tests=190510_KZ_1228c343ccf04148619a5d0b89a41f71,190510_RE_b3bfad442f32c690a9f420fe46025b8d,190510_RS_3b5f0bff2d95161351dc6934cadbf1cf,190510_SC_5c458c451941f81b12911ccf4171a817,190510_63_52d5edd8743773815fbacb2e9c66d228,190510_AS_741b29f5af5a6e54980d82826d7bb5bb)
 
 ## Quick Start
 
@@ -94,15 +96,17 @@ To deploy to github pages, simply do the following:
 npm run deploy
 ```
 
-
 #### Access Locally
+
 ```
 $ git clone https://github.com/[GITHUB_USERNAME]/[REPO_NAME].git
 $ cd [REPO_NAME]
 $ yarn
 $ npm run develop
 ```
+
 To test the CMS locally, you'll need run a production build of the site:
+
 ```
 $ npm run build
 $ gatsby serve
@@ -148,9 +152,11 @@ $ gatsby serve
 ```
 
 ## Related
+
 [Statinamic port](https://github.com/thangngoc89/statinamic-theme-lumen) by [Khoa Nguyen](https://github.com/thangngoc89)
 
 ## License
+
 The MIT License (MIT)
 
 Copyright (c) 2016-2019 Nan Zhou

@@ -1,16 +1,13 @@
 // @flow strict
-import React, { useEffect } from 'react';
+import React from 'react';
 import { graphql } from 'gatsby';
 
 import 'gitalk/dist/gitalk.css';
-import Gitalk from 'gitalk';
 
 import Layout from '../components/Layout';
 import Post from '../components/Post';
 import { useSiteMetadata } from '../hooks';
 import type { MarkdownRemark } from '../types';
-
-const siteConfig = require('../../config');
 
 type Props = {
   data: {
@@ -27,19 +24,6 @@ const PostTemplate = ({ data }: Props) => {
     socialImage
   } = frontmatter;
   const metaDescription = postDescription !== null ? postDescription : siteSubtitle;
-  const { gitalk } = siteConfig;
-  // 评论插件
-
-  useEffect(() => {
-    if (gitalk) {
-      const GitTalkInstance = new Gitalk({
-        ...gitalk,
-        title: postTitle
-        // id: id || graphqlId
-      });
-      GitTalkInstance.render('gitalk-container');
-    }
-  }, []);
 
   return (
     <Layout

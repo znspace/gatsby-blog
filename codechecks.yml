@@ -1,0 +1,8 @@
+checks:
+  - name: build-size-watcher
+    options:
+      gzip: false
+      files:
+        - path: './public/*.js'
+        - path: './public/*.css'
+        - path: './public/media/*'
