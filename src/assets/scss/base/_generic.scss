@@ -116,6 +116,17 @@ strong {
   font-weight: 600;
 }
 
+p code {
+  background: rgba(254, 250, 199, 1);
+  color: #e67474;
+  word-break: break-word;
+  font-family: 'Source Code Pro', monospace, Helvetica, Tahoma, Arial, STXihei,
+    'STHeiti Light', 'Microsoft YaHei', sans-serif;
+  padding: 2px;
+  text-shadow: none;
+  border-radius: 5px;
+}
+
 ul {
   list-style: square;
   @include margin-bottom(1);

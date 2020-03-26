@@ -68,30 +68,30 @@ module.exports = {
             }))
           ),
           query: `
-              {
-                allMarkdownRemark(
-                  limit: 1000,
-                  sort: { order: DESC, fields: [frontmatter___date] },
-                  filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
-                ) {
-                  edges {
-                    node {
-                      html
-                      fields {
-                        slug
-                      }
-                      frontmatter {
-                        title
-                        date
-                        template
-                        draft
-                        description
-                      }
+            {
+              allMarkdownRemark(
+                limit: 1000,
+                sort: { order: DESC, fields: [frontmatter___date] },
+                filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
+              ) {
+                edges {
+                  node {
+                    html
+                    fields {
+                      slug
+                    }
+                    frontmatter {
+                      title
+                      date
+                      template
+                      draft
+                      description
                     }
                   }
                 }
               }
-            `,
+            }
+          `,
           output: '/rss.xml',
           title: siteConfig.title
         }]
@@ -113,7 +113,7 @@ module.exports = {
             options: {
               maxWidth: 960,
               withWebp: true,
-              ignoreFileExtensions: [],
+              ignoreFileExtensions: []
             }
           },
           {
@@ -121,7 +121,20 @@ module.exports = {
             options: { wrapperStyle: 'margin-bottom: 1.0725rem' }
           },
           'gatsby-remark-autolink-headers',
-          'gatsby-remark-prismjs',
+          {
+            resolve: 'gatsby-remark-vscode',
+            // All options are optional. Defaults shown here.
+            options: {
+              colorTheme: {
+                defaultTheme: 'Solarized Light', // Required
+                prefersDarkTheme: 'Monokai Dimmed', // Optional: used with `prefers-color-scheme: dark`
+                prefersLightTheme: 'Quiet Light' // Optional: used with `prefers-color-scheme: light`
+              }, // Read on for list of included themes. Also accepts object and function forms.
+              wrapperClassName: '', // Additional class put on 'pre' tag
+              injectStyles: true, // Injects (minimal) additional CSS for layout and scrolling
+              logLevel: 'error' // Set to 'warn' to debug if something looks wrong
+            }
+          },
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
           'gatsby-remark-external-links'
@@ -134,7 +147,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
-        modulePath: `${__dirname}/src/cms/index.js`,
+        modulePath: `${__dirname}/src/cms/index.js`
       }
     },
     {
@@ -142,9 +155,9 @@ module.exports = {
       options: {
         trackingIds: [siteConfig.googleAnalyticsId],
         pluginConfig: {
-          head: true,
-        },
-      },
+          head: true
+        }
+      }
     },
     {
       resolve: 'gatsby-plugin-sitemap',
@@ -187,7 +200,7 @@ module.exports = {
         theme_color: '#F7A046',
         display: 'standalone',
         icon: 'static/photo.jpg'
-      },
+      }
     },
     'gatsby-plugin-offline',
     'gatsby-plugin-catch-links',
@@ -197,11 +210,11 @@ module.exports = {
       options: {
         postCssPlugins: [...postCssPlugins],
         cssLoaderOptions: {
-          camelCase: false,
+          camelCase: false
         }
       }
     },
     'gatsby-plugin-flow',
-    'gatsby-plugin-optimize-svgs',
+    'gatsby-plugin-optimize-svgs'
   ]
 };

@@ -23,7 +23,8 @@ const PostTemplate = ({ data }: Props) => {
     description: postDescription,
     socialImage
   } = frontmatter;
-  const metaDescription = postDescription !== null ? postDescription : siteSubtitle;
+  const metaDescription =
+    postDescription !== null ? postDescription : siteSubtitle;
 
   return (
     <Layout
@@ -31,8 +32,6 @@ const PostTemplate = ({ data }: Props) => {
       description={metaDescription}
       socialImage={socialImage}>
       <Post post={data.markdownRemark} />
-
-      <div id="gitalk-container" />
     </Layout>
   );
 };

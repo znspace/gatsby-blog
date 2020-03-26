@@ -8,7 +8,7 @@ category: '技术'
 tags:
   - 'technology'
   - 'git'
-description: '项目中经常会存在一些敏感信息，类似的如服务的 secrets, ids, API keys 等不希望公开。为了方便起见，会将这些数据存储在 git 中，本文将介绍使用 git-crypt 加密所选数据的方法，保证数据安全。'
+description: '项目中经常会存在一些敏感信息，类似的如服务的 secrets, ids, API keys 等不希望公开。为了方便起见，会将这些数据存储在 git 中，本文将介绍使用 git-crypt 加密数据的方法，保证数据安全。'
 socialImage: ''
 ---
 
