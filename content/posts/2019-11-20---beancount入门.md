@@ -7,7 +7,7 @@ slug: '/posts/beancount-start/'
 category: '理财'
 tags:
   - 'financial'
-description: ''
+description: 'Beancount 是一个开源的复式记账软件，本文是个人使用 Beancount 的一些实践。'
 socialImage: ''
 ---
 
@@ -15,6 +15,7 @@ socialImage: ''
     - [安装](#%e5%ae%89%e8%a3%85)
     - [使用 git 管理](#%e4%bd%bf%e7%94%a8-git-%e7%ae%a1%e7%90%86)
     - [目录结构](#%e7%9b%ae%e5%bd%95%e7%bb%93%e6%9e%84)
+    - [参考](#%e5%8f%82%e8%80%83)
 
 # 开始使用
 
@@ -89,6 +90,11 @@ Running Fava on http://localhost:5000
 `books`：存放交易，可以按年、月管理，方便记录和查找账单；
 
 每个大目录下都创建 `index.bean` 文件，作为目录入口来 **include** 其他文件
+
+### 参考
+
+- [Beancount —— 命令行复式簿记](https://wzyboy.im/post/1063.html)
+- [Beancount 最佳实践](https://xwartz.xyz/blog/beancount-best-practice/)
 
 <!-- # 基本语法
 
