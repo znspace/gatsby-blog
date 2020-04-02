@@ -8,7 +8,7 @@ category: 技术
 tags:
   - technology
   - css
-description: '社区中移动端布局方案百花齐放，其中比较流行的应该是以使用视口单位 vh 进行布局，本文介绍实际使用 vh 时遇到的问题及解决方法。'
+description: '社区中移动端布局方案百花齐放，其中比较流行的应该是使用 vh 进行布局，本文将介绍实际使用 vh 时遇到的问题及解决方法。'
 socialImage: ''
 ---
 
